@@ -1,3 +1,3 @@
 require './ranking'
 
-run Sinatra::Application
+run Sinatra::Application::HotOrNot
