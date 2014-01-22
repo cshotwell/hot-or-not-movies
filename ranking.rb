@@ -11,16 +11,11 @@ class Movie < ActiveRecord::Base
 end
 
 class HotOrNot < Sinatra::Base
-  set :root, File.dirname('#{Dir.pwd}')
-
   register Sinatra::AssetPack
   assets do
-    js :application, [
-      './js/*.js',
-    ]
-    css :application, [
-      './css/*.css',
-    ]
+    serve '/js', from: 'assets/js'
+    serve '/css', from: 'assets/css'
+    serve '/images', from: 'assets/images'
   end
 
   get '/' do
