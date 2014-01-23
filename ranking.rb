@@ -20,7 +20,15 @@ class HotOrNot < Sinatra::Base
 
   get '/' do
     
+    @movie_1 = get_random_movie
+    @movie_2 = get_random_movie
+
     erb :home
     
+  end
+
+  private
+  def get_random_movie
+    Movie.order("RANDOM()").first
   end
 end

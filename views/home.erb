@@ -6,13 +6,13 @@
     </div>
     <div class="container">
       <div class="row">
-	<div id="movie1" class="col-md-6 no-frame" title="Vote for A Good Day To Die Hard">
-	  <img id="movieImg1" class="center-block" src="images/AGoodDayToDieHard.jpg"/>
-	  <h4 id="movieTitle1" class="text-center">A Good Day To Die Hard</h4>
+	  <div id="movie1" class="col-md-6 no-frame" title="<%= @movie_1.title %>">
+	  <img id="movieImg1" class="center-block" src="images/<%= @movie_1.poster %>"/>
+	  <h4 id="movieTitle1" class="text-center"><%= @movie_1.title %></h4>
 	</div>
-	<div id="movie2" class="col-md-6 no-frame" title="Vote for A Good Day To Die Hard">
-	  <img id="movieImg2" class="center-block" src="images/AGoodDayToDieHard.jpg"/>
-	  <h4 id="movieTitle2" class="text-center">A Good Day To Die Hard</h4>
+	<div id="movie2" class="col-md-6 no-frame" title="<%= @movie_2.title %>">
+	  <img id="movieImg2" class="center-block" src="images/<%= @movie_2.poster %>"/>
+	  <h4 id="movieTitle2" class="text-center"><%= @movie_2.title %></h4>
 	</div>
       </div>
     </div>
