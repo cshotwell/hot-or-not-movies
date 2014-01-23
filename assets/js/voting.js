@@ -9,8 +9,22 @@ function init() {
   $("#movie2").click(function(event) {
     voteFor(this);
   });
+
+  setupMouseOverFrame('#movie1')
+  setupMouseOverFrame('#movie2')
 }
 
-function voteFor(e) {
-  console.log("A vote for " + e.id);
+function setupMouseOverFrame(selector) {
+  $(selector).mouseenter(function(event) {
+    $(this).removeClass('no-frame');
+    $(this).addClass('frame');
+  });
+  $(selector).mouseleave(function(event) {
+    $(this).removeClass('frame');
+    $(this).addClass('no-frame');
+  });
+}
+
+function voteFor(element) {
+  console.log("A vote for " + element.id);
 }

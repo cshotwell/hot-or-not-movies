@@ -1,3 +1,10 @@
 .jumbotron {
   text-align: center;
 }
+
+.no-frame {
+  border: 2px solid #FFF;
+}
+.frame {
+  border: 2px solid #000;
+}
