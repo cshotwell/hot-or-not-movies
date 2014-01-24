@@ -1,1 +1,23 @@
-Leaderboard!
+<div class="container">
+	<div class="panel panel-default">
+	  <!-- Default panel contents -->
+	  <div class="panel-heading">Top 50 Ranking</div>
+
+	  <!-- Table -->
+	  <table class="table">
+		<tr>
+			<th>Place</th>
+			<th>Movie Title</th>
+			<th>Votes</th>
+		</tr>
+		<% @movies.each do |movie| %>
+			<tr>
+			<td><%= 1 %></td>
+			<td><%= movie.title %></td>	
+			<td><%= movie.score %></td>
+			</tr>
+		<% end %>
+	    
+	  </table>
+	</div>
+</div>

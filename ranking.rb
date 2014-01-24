@@ -31,6 +31,7 @@ class HotOrNot < Sinatra::Base
   end
 
   get '/leaderboard' do
+    @movies = Movie.all.order(score: :desc)
     erb :leaderboard
   end
 
