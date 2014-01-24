@@ -3,15 +3,15 @@
 $(init);
 
 function init() {
-  $("#movie1").click(function(event) {
+  $(".movie1").click(function(event) {
     voteFor(this);
   });
-  $("#movie2").click(function(event) {
+  $(".movie2").click(function(event) {
     voteFor(this);
   });
 
-  setupMouseOverFrame('#movie1')
-  setupMouseOverFrame('#movie2')
+  setupMouseOverFrame('.movie1')
+  setupMouseOverFrame('.movie2')
 }
 
 function setupMouseOverFrame(selector) {
@@ -27,4 +27,6 @@ function setupMouseOverFrame(selector) {
 
 function voteFor(element) {
   console.log("A vote for " + element.id);
+  $.post("/" + element.id, true);
+  window.location.replace(window.location) 
 }

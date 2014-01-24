@@ -19,12 +19,17 @@ class HotOrNot < Sinatra::Base
   end
 
   get '/' do
-    
     @movie_1 = get_random_movie
     @movie_2 = get_random_movie
-
     erb :home
-    
+  end
+
+  post '/:id' do
+    movie  = Movie.find(params[:id])
+    movie.update_attributes({score: movie.score+1})
+
+    redirect '/'
+
   end
 
   private
