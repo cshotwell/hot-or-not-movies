@@ -1,9 +1,3 @@
-    <div class="jumbotron">
-      <img class="pull-left" src="images/fairview_logo.png"/>
-      <img class="pull-right" src="images/fairview_logo.png"/>
-      <h1>Best Movies of 2013</h1>
-      <p class="lead">Vote which movie is better!</p>
-    </div>
     <div class="container">
       <div class="row">
 	  <div id="<%= @movie_1.id %>" class="col-md-6 no-frame movie1" title="<%= @movie_1.title %>">
@@ -15,4 +9,14 @@
 	  <h4 id="movieTitle2" class="text-center"><%= @movie_2.title %></h4>
 	</div>
       </div>
+    </div>
+
+    <div class="container">
+    <div class="row">
+	    <div class="col-md-5"></div>
+	    <div class="col-md-2">
+		    <a href="/leaderboard"><h3>Leaderboard</h3></a>
+	    </div>
+	    <div class="col-md-5"></div>
+    </div>
     </div>

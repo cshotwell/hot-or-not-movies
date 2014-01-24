@@ -27,9 +27,11 @@ class HotOrNot < Sinatra::Base
   post '/:id' do
     movie  = Movie.find(params[:id])
     movie.update_attributes({score: movie.score+1})
-
     redirect '/'
+  end
 
+  get '/leaderboard' do
+    erb :leaderboard
   end
 
   private
