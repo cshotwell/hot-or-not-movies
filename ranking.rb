@@ -4,7 +4,7 @@ require 'sinatra/assetpack'
 
 ActiveRecord::Base.establish_connection(
   adapter: 'sqlite3',
-  database: 'sinatra_application.sqlire3.db'
+  database: 'hot_or_not.sqlite3.db'
 )
 
 class Movie < ActiveRecord::Base
@@ -31,8 +31,7 @@ class HotOrNot < Sinatra::Base
   end
 
   get '/leaderboard' do
-    @movies = Movie.all.order(score: :desc)
-
+    @movies = Movie.order(score: :desc, title: :asc)
     erb :leaderboard
   end
 
