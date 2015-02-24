@@ -4,7 +4,7 @@ require 'sinatra/assetpack'
 
 ActiveRecord::Base.establish_connection(
   adapter: 'sqlite3',
-  database: 'sinatra_application.sqlire3.db'
+  database: 'hot_or_not.sqlite3.db'
 )
 
 class Movie < ActiveRecord::Base
