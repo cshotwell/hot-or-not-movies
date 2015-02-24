@@ -1,24 +1,26 @@
-<div class="container">
-	<div class="panel panel-default">
-	  <!-- Default panel contents -->
-	  <div class="panel-heading">Top 50 Ranking</div>
+<div class="col-md-8 col-md-offset-2">
+  <div class="panel panel-default">
+    <div class="panel-heading">Top 50 Ranking</div>
 
-	  <!-- Table -->
-	  <table class="table">
-		<tr>
-			<th>Place</th>
-			<th>Movie Title</th>
-			<th>Votes</th>
-		</tr>
+    <table class="table table-striped">
+      <tr>
+        <th>Place</th>
+        <th>Movie Title</th>
+        <th>Votes</th>
+      </tr>
+      <% @movies.each_with_index do |movie, rank| %>
+        <tr>
+          <td><%= rank + 1 %></td>
+          <td><%= movie.title %></td>
+          <td><%= movie.score %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
 
-		<% @movies.each_with_index do |movie, n| %>
-			<tr>
-				<td><%= n %></td>
-				<td><%= movie.title %></td>
-				<td><%= movie.score %></td>
-			</tr>
-		<% end %>
-	    
-	  </table>
-	</div>
+<div class="row">
+  <div class="col-md-2 col-md-offset-5">
+    <a href="/"><h3>Vote</h3></a>
+  </div>
 </div>
