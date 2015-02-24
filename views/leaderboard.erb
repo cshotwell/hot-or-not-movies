@@ -8,6 +8,13 @@
         <th>Movie Title</th>
         <th>Votes</th>
       </tr>
+      <% @movies.each_with_index do |movie, rank| %>
+        <tr>
+          <td><%= rank + 1 %></td>
+          <td><%= movie.title %></td>
+          <td><%= movie.score %></td>
+        </tr>
+      <% end %>
     </table>
   </div>
 </div>
